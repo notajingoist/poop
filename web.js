@@ -1,126 +1,48 @@
 // web.js
 var express = require('express');
 var logfmt = require('logfmt');
-var passport = require('passport');
-var util = require('util');
-var InstagramStrategy = require('passport-instagram').Strategy;
-
-// app.get('/', function(req, res) {
-//   res.send('Hello World!');
-// });
-// 
-var INSTAGRAM_CLIENT_ID = "f076148c8e754df8bc5051aea065512e";
-var INSTAGRAM_CLIENT_SECRET = "adcce693c0924207964584b426bf0a6b";
-
-
-passport.serializeUser(function(user, done) {
-  done(null, user);
-});
-
-passport.deserializeUser(function(obj, done) {
-  done(null, obj);
-});
-
-passport.use(new InstagramStrategy({
-    clientID: INSTAGRAM_CLIENT_ID,
-    clientSecret: INSTAGRAM_CLIENT_SECRET,
-    callbackURL: "http://localhost:5000/auth/instagram/callback"
-  },
-  function(accessToken, refreshToken, profile, done) {
-    User.findOrCreate({ instagramId: profile.id }, function (err, user) {
-      return done(err, user);
-    });
-  }
-));
-
-
 var app = express();
 
-//var app = express.createServer();
+// Instagram = require('instagram-node-lib');
 
-// configure Express
-// app.configure(function() {
- 
+// Instagram.set('client_id', 'f076148c8e754df8bc5051aea065512e');
+// Instagram.set('client_secret', 'adcce693c0924207964584b426bf0a6b');
 
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'ejs');
-
-  var bodyParser = require('body-parser');
-  var methodOverride = require('method-override');
-
-  app.use(bodyParser());
-  app.use(methodOverride());
-  // app.use(app.router);
-  app.use(function(err, req, res, next){
-    // logic
-  });
-
-  // app.use(express.logger());
-  // app.use(express.cookieParser());
-  // app.use(express.bodyParser());
-  // app.use(express.methodOverride());
-  // app.use(express.session({ secret: 'keyboard cat' }));
-  // Initialize Passport!  Also use passport.session() middleware, to support
-  // persistent login sessions (recommended).
-  app.use(passport.initialize());
-  app.use(passport.session());
-  // app.use(app.router);
-  // app.use(express.static(__dirname + '/public'));
+// Instagram.tags.info({
+//   name: 'blue',
+//   complete: function(data){
+//     console.log(data);
+//   }
 // });
 
 
-app.get('/', function(req, res){
-  res.render('index', { user: req.user });
-});
+// var request = require('request');
+// var url = "https://api.instagram.com/v1/media/popular";
+// var params = {
+// 	client_id: "f076148c8e754df8bc5051aea065512e"
+// }
 
-app.get('/account', ensureAuthenticated, function(req, res){
-  res.render('account', { user: req.user });
-});
+// var qs = require('querystring');
 
-app.get('/login', function(req, res){
-  res.render('login', { user: req.user });
-});
+// module.exports.instagramPictures = function(callback) {
+// 	request({
+// 		url: url + '?' + qs.stringify(params),
+// 		json: true,
+// 		timeout: 30000
+// 	}, function(error, response, body) {
+// 		if (error) {
+// 			return console.log("CRAP");
+// 		}
 
-// GET /auth/instagram
-//   Use passport.authenticate() as route middleware to authenticate the
-//   request.  The first step in Instagram authentication will involve
-//   redirecting the user to instagram.com.  After authorization, Instagram
-//   will redirect the user back to this application at /auth/instagram/callback
-app.get('/auth/instagram',
-  passport.authenticate('instagram'),
-  function(req, res){
-    // The request will be redirected to Instagram for authentication, so this
-    // function will not be called.
-  });
+// 		var data = (body.data.map(function(inst) { 
+// 			return inst.images.standard_resolution.url; 
+// 		}));
 
-// GET /auth/instagram/callback
-//   Use passport.authenticate() as route middleware to authenticate the
-//   request.  If authentication fails, the user will be redirected back to the
-//   login page.  Otherwise, the primary route function function will be called,
-//   which, in this example, will redirect the user to the home page.
-app.get('/auth/instagram/callback', 
-  passport.authenticate('instagram', { failureRedirect: '/login' }),
-  function(req, res) {
-    res.redirect('/');
-  });
+// 		console.log(body.data);
 
-app.get('/logout', function(req, res){
-  req.logout();
-  res.redirect('/');
-});
-
-// app.listen(3000);
-
-
-// Simple route middleware to ensure user is authenticated.
-//   Use this route middleware on any resource that needs to be protected.  If
-//   the request is authenticated (typically via a persistent login session),
-//   the request will proceed.  Otherwise, the user will be redirected to the
-//   login page.
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) { return next(); }
-  res.redirect('/login')
-}
+// 		callback(data);
+// 	});
+// }
 
 
 app.use(logfmt.requestLogger());
