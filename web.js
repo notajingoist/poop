@@ -4,12 +4,6 @@ var logfmt = require('logfmt');
 var passport = require('passport');
 var util = require('util')
 
-var app = express();
-
-
-app.use(logfmt.requestLogger());
-
-app.use(express.static(__dirname));
 // app.get('/', function(req, res) {
 //   res.send('Hello World!');
 // });
@@ -29,7 +23,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new InstagramStrategy({
     clientID: INSTAGRAM_CLIENT_ID,
     clientSecret: INSTAGRAM_CLIENT_SECRET,
-    callbackURL: "http://localhost:5000"
+    callbackURL: "http://poopscoop.herokuapp.com/"
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({ instagramId: profile.id }, function (err, user) {
@@ -37,6 +31,12 @@ passport.use(new InstagramStrategy({
     });
   }
 ));
+
+
+var app = express();
+
+app.use(logfmt.requestLogger());
+app.use(express.static(__dirname));
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
