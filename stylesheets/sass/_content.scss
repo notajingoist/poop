@@ -6,6 +6,11 @@
 	//display: none;
 }
 
+.test-img {
+	border-radius: 4px;
+	border: 4px solid #fff;
+}
+
 .color {
 	width: 60px;
 	height: 60px;
@@ -173,9 +178,64 @@
 
 .odor-img {
 	background: 
-		url('http://i.imgur.com/os2lHro.gif') 
+		url('http://media.giphy.com/media/1Pyi8KuRGJ3AA/giphy.gif') 
 		50% 50% no-repeat;
 	background-size: cover;
+	
+	// &.rotten {
+	// 	background: 
+	// 		url('http://media.giphy.com/media/1Pyi8KuRGJ3AA/giphy.gif') 
+	// 		50% 50% no-repeat;
+	// 	background-size: cover;
+	// }
+
+	// &.sulfurous {
+	// 	background: 
+	// 		url('http://media.giphy.com/media/aO8fspNI9yQTu/giphy.gif') 
+	// 		50% 50% no-repeat;
+	// 	background-size: cover;
+	// }
+
+	// &.musky {
+	// 	background: 
+	// 		url('http://media.giphy.com/media/izKXY26H7hH9u/giphy.gif') 
+	// 		50% 50% no-repeat;
+	// 	background-size: cover;
+	// }
+
+	// &.grassy {
+	// 	background: 
+	// 		url('http://media.giphy.com/media/Hg93tyK22nz3i/giphy.gif') 
+	// 		50% 50% no-repeat;
+	// 	background-size: cover;
+	// }
+
+	
+
+	// &.strangely-pleasing {
+	// 	background: 
+	// 		url('http://media3.giphy.com/media/qwhoLuIJiiGCQ/giphy.gif') 
+	// 		50% 50% no-repeat;
+	// 	background-size: cover;
+	// }
+
+	// &.none {
+	// 	background: 
+	// 		url('http://media.giphy.com/media/1Pyi8KuRGJ3AA/giphy.gif') 
+	// 		50% 50% no-repeat;
+	// 	background-size: cover;
+	// }
+
+
+}
+
+.row {
+	//margin-bottom: 8px;
+	display: block;
+}
+
+em {
+	font-weight: bold;
 }
 
 .consistency-img {
@@ -194,9 +254,9 @@
 
 .congrats-img {
 	background:
-		url('/images/effort-5.png'),
-		url('/images/satisfaction-5.png'),
-		url('/images/consistency/swirl-02.png')
+		url('/images/effort-3.png'), //Effortless
+		url('/images/satisfaction-3.png'), //somewhat satisfied
+		url('/images/consistency/swirl-07.png') //olive, //strangely pleasing, //fluffy
 		40% 20% no-repeat;
 	background-size: 200px auto;
 	background-color: #fff;

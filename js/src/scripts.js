@@ -58,7 +58,7 @@ var POOPSCOOP = {
 		        return (image.tags.indexOf('food') >= 0);
 		    },
 		    accessToken: '1388629745.467ede5.b060b8511f114e89b49f07397a9e72eb',
-		    template: '<div class=""><img class="food-img" src="{{image}}"><div class="food-input"><input type="text" class="food-field" id="{{id}}"><div class="button button-next" data-food-id="{{id}}" data-screen="#colors" data-food-url="{{image}}">Next</div></div></div><br><br><br><br><br><br><br><br><br><br>',
+		    template: '<div class="" id="{{id}}-hidden"><img class="food-img" src="{{image}}"><div class="food-input"><input type="text" class="food-field" id="{{id}}"><div class="button button-next" data-food-id="{{id}}" data-screen="#colors" data-food-url="{{image}}">Next</div></div></div><br><br><br><br><br><br><br><br><br><br>',
 		    after: function() {
 		    	
 
@@ -107,12 +107,11 @@ var POOPSCOOP = {
 		};
 
 		this.odors = {
-			rotten: '',
-			sulfurous: '',
-			musky: '',
-			grassy: '',
-			strangelyPleasing: '',
-			none: ''
+			'rotten': 'http://media.giphy.com/media/1Pyi8KuRGJ3AA/giphy.gif',
+			'sulfurous': 'http://media.giphy.com/media/aO8fspNI9yQTu/giphy.gif',
+			'musky': 'http://media.giphy.com/media/izKXY26H7hH9u/giphy.gif',
+			'grassy': 'http://media.giphy.com/media/Hg93tyK22nz3i/giphy.gif',
+			'strangely pleasing': 'http://media3.giphy.com/media/qwhoLuIJiiGCQ/giphy.gif'
 		};
 
 		this.satisfaction = {
@@ -154,7 +153,16 @@ var POOPSCOOP = {
 		this.$colors.on('click', this.advancePageFromButton.bind(this));
 
 		this.$imgCircles.on('click', this.advancePageFromButton.bind(this));
+		var context = this;
 		this.$odorDropdown.change(function(e) {
+			//alert('hey');
+			var val = $(e.currentTarget).val();
+			//alert(val);
+			$('odor-img').css('background-image', 'url("'+context.odors[val]+'")');
+
+			// if(val === 'sulfurous') {
+			// 	$(odor-img).removeCaddClass();
+			// }
 
 		});
 		//console.log(this.$nextBtns[0].);
@@ -246,6 +254,7 @@ var POOPSCOOP = {
 	advancePageFromButton: function(e) {
 		this.$panelScreens.hide();
 		var nextId = $(e.currentTarget).data('screen');
+		var switchPages = false;//true;
 
 		if (this.$currentPanel.attr('id') === 'account') {
 			//if ($('#username').val() > 0) {
@@ -264,16 +273,104 @@ var POOPSCOOP = {
 			var foodId = $(e.currentTarget).data('foodId');
 			var foodValue = $('#'+foodId).val();
 			var foodImageURL = $(e.currentTarget).data('foodUrl'); 
-			var context = this;
-			
-
+			var context = this;			
+			console.log('hi', foodId);
+			console.log('hey', foodValue);
+			console.log('blah', foodImageURL);
 			this.userData.food[foodImageURL] = foodValue;
-			this.currentFoodNum++;
+			//this.currentFoodNum++;
 
 			//console.log($('.instafeed').eq(this.currentFoodNum));
 
-			$('#'+foodId).parent().fadeOut(); //next btn
-			$('#'+foodId).parent().prev().fadeOut(); //image
+			// $('#'+foodId).parent().fadeOut(); //next btn
+			// $('#'+foodId).parent().prev().fadeOut(); //image
+
+
+				///
+
+			//if (this.currentFoodNum < 3) { //(this.numFood - 1)) {
+				// var foodId = $(e.currentTarget).data('foodId');
+				// var foodValue = $('#'+foodId).val();
+				// var foodImageURL = $(e.currentTarget).data('foodUrl'); 
+				// var context = this;
+				
+
+				//this.userData.food[foodImageURL] = foodValue;
+			//console.log(foodImageURL);
+			//
+				//$('#' + foodId + '-hidden').fadeOut();//addClass('hide');
+				//this.currentFoodNum++;
+
+			//this.currentFoodNum++;
+
+				/*setTimeout(function() {
+					//$('#' + foodId + '-hidden').remove();
+					context.$foodImages = context.$instafeed.find('img');
+					context.$foodImages.addClass('food-img');
+					var length = context.$foodImages.length;
+					console.log(length);
+					if (length > 0) {
+						console.log('hiii', $(context.$foodImages[0]).parent().attr('id'));
+						
+						setTimeout(function() {
+							$(context.$foodImages[this.currentFoodNum]).parent().removeClass('hide').fadeIn();
+						});
+
+
+						context.numFood = context.$foodImages.length;
+
+						$('.button-next').on('click', context.advancePageFromButton.bind(context));
+					}
+
+					if (length > 1) {
+						switchPages = true;		
+					} else {
+						switchPages = false;
+					}
+					
+				});*/
+
+				//$('#' + foodImageURL).
+
+				//console.log($('.instafeed').eq(this.currentFoodNum));
+
+				//$('#'+foodId).parent().fadeOut(); //next btn
+				//$('#'+foodId).parent().prev().fadeOut(); //image
+
+
+				//console.log("LOOOKALSSKLJDKAS");
+				// var context = this;
+				// this.$panelScreens.hide();
+				// var nextId = this.$currentPanel.data('screen');
+				// setTimeout(function() {
+				// 	$(nextId).fadeIn();
+				// 	context.$currentPanel = $(nextId);
+				// 	//context.checkPanel();
+				// });
+
+				//alert('hey');
+
+				//this.currentFoodNum++;
+				//setTimeout(function() {
+
+
+
+					// console.log(
+					// 	context.$foodImages[this.currentFoodNum + 1].parent().next());
+
+					//$('#'+foodId).parent().next().fadeIn();
+					//console.log($('#'+foodId).parent().next());
+				//});
+
+
+
+
+				//this.currentoodNum++;
+
+				//return;
+				//console.log($('#'+foodId).parent());
+				//console.log($(e.currentTarget).parent());
+			//}
 		}
 
 		else if (this.$currentPanel.attr('id') === 'odor') {
@@ -298,15 +395,17 @@ var POOPSCOOP = {
 			console.log(this.userData.effort);
 		}
 
-		var context = this;
-		setTimeout(function() {
-			//console.log(nextId);
-			
-			context.$currentPanel = $(nextId);
-			context.$currentPanel.fadeIn();
-			console.log(context.$currentPanel);
-			//context.checkPanel();
-		});
+		//if (switchPages === true || (this.$currentPanel.attr('id') !== 'name')) {
+			var context = this;
+			setTimeout(function() {
+				//console.log(nextId);
+				
+				context.$currentPanel = $(nextId);
+				context.$currentPanel.fadeIn();
+				console.log(context.$currentPanel);
+				//context.checkPanel();
+			});
+		//}
 
 
 
