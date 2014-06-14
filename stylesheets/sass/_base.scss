@@ -12,9 +12,16 @@
 	// 	background: $some-color;
 	// }
 	// 
-	.test-img {
+	.logo-img {
 		//@extend %width-range;
-		width: 100%;
+		
+		background: url('/images/logo.svg') center 10% no-repeat;
+		//height: 400px;
+		background-size: 100% auto;
+		width: 100%;//500px;
+		text-align: center;
+		height: 350px;
+		//height: 500px;
 	}
 
 	textarea, input,
@@ -46,25 +53,11 @@
 		margin: 30px 0 15px 0;
 	}
 
-	.button {
-		border: none;
-		font-family: "Chewy", "PT Sans", sans-serif;
-		font-size: 32px;
-		padding: 20px;
-		margin: 10% auto; //35px
-		border-radius: 35%;
-		color: #fff;
-		background-color: $poop-col;
-		
-		&:hover {
-			cursor: pointer;
-			opacity: 0.7;
-			//background-color: #eee;
-		}
-	}
+	
 
 	.panel-screen {
 		@extend %width-range;
+		//width: 100%;
 		margin: 30px auto;
 		display: none;
 

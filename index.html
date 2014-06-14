@@ -14,18 +14,18 @@
 <body>
 	
 	<div class="panel-screen" id="main">
-		<h1>poopscoop</h1>
-		<img class="test-img" src="http://placehold.it/250x150">
-		<div class="button button-poop">I'm pooping</div>
+		<!-- <h1>poopscoop</h1> -->
+		<div class="logo-img"></div>
+		<div id="im-pooping" data-screen="#account" class="button button-poop">I'm pooping</div>
 	</div>
 
 	<div class="panel-screen" id="account">
-		<div class="button button-poop">Sign in with Instagram</div>
+		<div id="sign-in-instagram" data-screen="#name" class="button button-poop">Sign in with Instagram</div>
 	</div>
 	
-	<div class="panel-screen" id="calculating"></div>
-	
-	<div class="panel-screen" id="name">
+	<!-- <div class="panel-screen" id="calculating"></div>
+	 -->
+	<div class="panel-screen" id="name" data-screen="#colors">
 		<img id="food-1" class="food-img" src="http://distilleryimage6.ak.instagram.com/33ac14de14d511e29fe522000a1f97ce_7.jpg">	
 		<div class="food-input">
 			<input type="text" class="food-field" name="food-1">
@@ -33,7 +33,7 @@
 		</div>
 	</div>
 
-	<div class="panel-screen" id="colors">
+	<div class="panel-screen" id="colors" data-screen="#odor">
 		<!-- <div class="minicolors minicolors-theme-default minicolors-position-bottom minicolors-position-left"> -->
 			<!-- <input type="hidden" id="hidden-input" class="demo minicolors-input" value="#db913d" size="7">
 			<span class="minicolors-swatch">
@@ -51,7 +51,7 @@
 
 	
 	
-	<div class="panel-screen" id="odor">
+	<div class="panel-screen" id="odor" data-screen="#consistency">
 		<h1>odor</h1>
 		<!-- <div class="odor-input"> -->
 		<div class="gif odor-img"></div>
@@ -66,25 +66,25 @@
 		</div> -->
 	</div>
 
-	<div class="panel-screen" id="consistency">
+	<div class="panel-screen" id="consistency" data-screen="#satisfaction">
 		<h1>consistency</h1>
 		<div class="img-circle consistency-img"></div>
 		<div class="slider"></div>
 	</div>
 	
-	<div class="panel-screen" id="satisfaction">
+	<div class="panel-screen" id="satisfaction" data-screen="#effort">
 		<h1>satisfaction</h1>
 		<div class="img-circle satisfaction-img"></div>
 		<div class="slider"></div>
 	</div>
 	
-	<div class="panel-screen" id="effort">
+	<div class="panel-screen" id="effort" data-screen="#congrats">
 		<h1>effort</h1>
 		<div class="img-circle effort-img"></div>
 		<div class="slider"></div>
 	</div>
 
-	<div class="panel-screen panel-congrats show" id="congrats">
+	<div class="panel-screen panel-congrats" id="congrats">
 		<section class="section-a">
 			<h1>CONGRATS</h1>
 			<div class="img-circle congrats-img"></div>
@@ -143,12 +143,6 @@
 
 <script src="js/vendor/util.js"></script>
 <script src="js/vendor/colorpicker.js"></script>
-<script type="text/javascript">
-		$(document).ready(function()
-        {
-			$('#colorPicker').tinycolorpicker();
-		});
-</script>
 <script src="js/src/scripts.js"></script>
 </body>
 </html>
