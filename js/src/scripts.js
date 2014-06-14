@@ -58,7 +58,7 @@ var POOPSCOOP = {
 		        return (image.tags.indexOf('food') >= 0);
 		    },
 		    accessToken: '1388629745.467ede5.b060b8511f114e89b49f07397a9e72eb',
-		    template: '<div class="hide"><img class="food-img" src="{{image}}"><div class="food-input"><input type="text" class="food-field" id="{{id}}"><div class="button button-next" data-food-id="{{id}}" data-screen="#colors" data-food-url="{{image}}">Next</div></div></div>',
+		    template: '<div class=""><img class="food-img" src="{{image}}"><div class="food-input"><input type="text" class="food-field" id="{{id}}"><div class="button button-next" data-food-id="{{id}}" data-screen="#colors" data-food-url="{{image}}">Next</div></div></div><br><br><br><br><br><br><br><br><br><br>',
 		    after: function() {
 		    	
 
