@@ -119,7 +119,7 @@ body {
 
 /* line 41, ../sass/_base.scss */
 h1 {
-  font-family: "Chewy", sans-serif;
+  font-family: "bebas_neueregular", "Chewy", sans-serif;
   font-size: 52px;
   margin-bottom: 35px;
   color: #fff;
@@ -132,26 +132,27 @@ h2 {
   color: #fff;
   text-align: left;
   margin: 30px 0 15px 0;
+  color: #8e2800;
 }
 
-/* line 58, ../sass/_base.scss */
+/* line 59, ../sass/_base.scss */
 .panel-screen {
   margin: 30px auto;
   display: none;
 }
-/* line 64, ../sass/_base.scss */
+/* line 65, ../sass/_base.scss */
 .panel-screen.show {
   display: block;
 }
 
 /* @end */
 /* @group additional styling */
-/* line 73, ../sass/_base.scss */
+/* line 74, ../sass/_base.scss */
 .hide {
   display: none;
 }
 
-/* line 77, ../sass/_base.scss */
+/* line 78, ../sass/_base.scss */
 .hide-text {
   display: block;
   overflow: hidden;
@@ -182,51 +183,57 @@ h2 {
 }
 
 /* line 22, ../sass/_content.scss */
-.yellow {
+.ui-slider-label-ticks > span {
+  font-family: "Chewy";
+  color: #fff;
+}
+
+/* line 27, ../sass/_content.scss */
+#yellow {
   background-color: #f9d70d;
 }
 
-/* line 25, ../sass/_content.scss */
-.olive {
+/* line 30, ../sass/_content.scss */
+#olive {
   background-color: #627530;
 }
 
-/* line 28, ../sass/_content.scss */
-.taupe {
+/* line 33, ../sass/_content.scss */
+#taupe {
   background-color: #b6b0ad;
 }
 
-/* line 31, ../sass/_content.scss */
-.chocolate {
+/* line 36, ../sass/_content.scss */
+#chocolate {
   background-color: #b64926;
 }
 
-/* line 34, ../sass/_content.scss */
-.darkChocolate {
+/* line 39, ../sass/_content.scss */
+#darkChocolate {
   background-color: #4f2502;
 }
 
-/* line 37, ../sass/_content.scss */
-.black {
+/* line 42, ../sass/_content.scss */
+#black {
   background-color: #3d3d3d;
 }
 
-/* line 40, ../sass/_content.scss */
-.burgundy {
+/* line 45, ../sass/_content.scss */
+#burgundy {
   background-color: #a12727;
 }
 
-/* line 43, ../sass/_content.scss */
-.beige {
+/* line 48, ../sass/_content.scss */
+#beige {
   background-color: #b68c7c;
 }
 
-/* line 47, ../sass/_content.scss */
+/* line 52, ../sass/_content.scss */
 .food-input {
   position: relative;
   margin: 0 auto;
 }
-/* line 53, ../sass/_content.scss */
+/* line 58, ../sass/_content.scss */
 .food-input .food-field {
   padding: 20px;
   border: none;
@@ -242,7 +249,7 @@ h2 {
   padding: 15px;
   font-family: "PT Sans", sans-serif;
 }
-/* line 69, ../sass/_content.scss */
+/* line 74, ../sass/_content.scss */
 .food-input .button-next {
   margin-left: 2.5%;
   display: inline-block;
@@ -254,7 +261,7 @@ h2 {
   line-height: 1;
 }
 
-/* line 82, ../sass/_content.scss */
+/* line 87, ../sass/_content.scss */
 .name-field {
   padding: 20px;
   border: none;
@@ -268,7 +275,7 @@ h2 {
   font-family: "PT Sans", sans-serif;
 }
 
-/* line 98, ../sass/_content.scss */
+/* line 103, ../sass/_content.scss */
 .button {
   border: none;
   font-family: "bebas_neueregular", "PT Sans", "Chewy", "PT Sans", sans-serif;
@@ -284,13 +291,13 @@ h2 {
   width: 90%;
   height: 65px;
 }
-/* line 113, ../sass/_content.scss */
+/* line 118, ../sass/_content.scss */
 .button:hover {
   cursor: pointer;
   opacity: 0.7;
 }
 
-/* line 121, ../sass/_content.scss */
+/* line 126, ../sass/_content.scss */
 .button-poop {
   border-radius: 35%;
   line-height: 1.3;
@@ -303,79 +310,82 @@ h2 {
   bottom: 0;
 }
 @media only screen and (max-width: 500px) {
-  /* line 121, ../sass/_content.scss */
+  /* line 126, ../sass/_content.scss */
   .button-poop {
     bottom: 10%;
   }
 }
 
-/* line 148, ../sass/_content.scss */
+/* line 153, ../sass/_content.scss */
 .img-circle {
   width: 230px;
   height: 230px;
-  margin: 0 auto;
+  margin: 15% auto;
   border-radius: 100%;
   border: 8px solid #fff;
 }
+/* line 161, ../sass/_content.scss */
+.img-circle:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
 
-/* line 157, ../sass/_content.scss */
+/* line 167, ../sass/_content.scss */
 .satisfaction-img {
   background: url("http://cdn.sheknows.com/articles/2014/02/cat_GIFs/cat-smile-purr.gif") 50% 50% no-repeat;
   background-size: cover;
 }
 
-/* line 164, ../sass/_content.scss */
+/* line 174, ../sass/_content.scss */
 .odor-img {
   background: url("http://i.imgur.com/os2lHro.gif") 50% 50% no-repeat;
   background-size: cover;
 }
 
-/* line 171, ../sass/_content.scss */
+/* line 181, ../sass/_content.scss */
 .consistency-img {
   background: url("http://i.huffpost.com/gadgets/slideshows/339559/slide_339559_3479854_free.gif") 50% 50% no-repeat;
   background-size: cover;
 }
 
-/* line 178, ../sass/_content.scss */
+/* line 188, ../sass/_content.scss */
 .effort-img {
   background: url("http://i.imgur.com/KFR4tHs.gif") 50% 50% no-repeat;
   background-size: cover;
 }
 
-/* line 185, ../sass/_content.scss */
+/* line 195, ../sass/_content.scss */
 .congrats-img {
-  background: url("http://willvideoforfood.com/wp-content/uploads/2012/12/poop.png") 50% 50% no-repeat;
-  background-size: 130px 130px;
+  background: url("/images/effort-5.png"), url("/images/satisfaction-5.png"), url("/images/consistency/swirl-02.png") 40% 20% no-repeat;
+  background-size: 200px auto;
   background-color: #fff;
 }
 
-/* line 193, ../sass/_content.scss */
+/* line 205, ../sass/_content.scss */
 .odor-dropdown {
-  padding: 20px;
   border: none;
   border-radius: 4px;
   width: 100%;
   background: #fff;
-  margin: 10% auto;
   height: 65px;
   font-size: 28px;
   padding: 15px;
   font-family: "PT Sans", sans-serif;
 }
 
-/* line 211, ../sass/_content.scss */
+/* line 222, ../sass/_content.scss */
 .odor-input {
   position: relative;
-  margin: 0 auto;
+  margin: 5% auto;
 }
 
-/* line 229, ../sass/_content.scss */
+/* line 240, ../sass/_content.scss */
 .slider {
   margin: 20% auto;
   width: 80%;
 }
 
-/* line 234, ../sass/_content.scss */
+/* line 245, ../sass/_content.scss */
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   background: #8e2800 !important;
   border: none !important;
@@ -384,18 +394,18 @@ h2 {
   height: 30px !important;
 }
 
-/* line 248, ../sass/_content.scss */
+/* line 259, ../sass/_content.scss */
 .ui-slider-horizontal
 .ui-slider-handle {
   top: -.5em !important;
 }
-/* line 251, ../sass/_content.scss */
+/* line 262, ../sass/_content.scss */
 .ui-slider-horizontal
 .ui-slider-handle:hover {
   cursor: pointer;
 }
 
-/* line 259, ../sass/_content.scss */
+/* line 270, ../sass/_content.scss */
 .poop-blurb {
   width: 100%;
   text-align: left;
@@ -407,13 +417,13 @@ h2 {
   font-size: 18px;
 }
 
-/* line 270, ../sass/_content.scss */
+/* line 281, ../sass/_content.scss */
 .slideshow {
   width: 100%;
   margin-bottom: 10%;
   position: relative;
 }
-/* line 275, ../sass/_content.scss */
+/* line 286, ../sass/_content.scss */
 .slideshow img {
   min-width: 50px;
   min-height: 50px;
@@ -422,7 +432,7 @@ h2 {
   margin: 2.5%;
 }
 
-/* line 287, ../sass/_content.scss */
+/* line 298, ../sass/_content.scss */
 .arrow {
   display: block;
   width: 48px;
@@ -430,30 +440,30 @@ h2 {
   position: absolute;
   top: calc(50% - 24px);
 }
-/* line 293, ../sass/_content.scss */
+/* line 304, ../sass/_content.scss */
 .arrow:hover {
   cursor: pointer;
 }
 
-/* line 298, ../sass/_content.scss */
+/* line 309, ../sass/_content.scss */
 .left-arrow {
   background: url("/images/left-arrow.png") 50% 50% no-repeat;
   left: -24px;
 }
 
-/* line 303, ../sass/_content.scss */
+/* line 314, ../sass/_content.scss */
 .right-arrow {
   background: url("/images/right-arrow.png") 50% 50% no-repeat;
   right: -24px;
 }
 
-/* line 309, ../sass/_content.scss */
+/* line 320, ../sass/_content.scss */
 .section-a,
 .section-b {
   margin: 0 auto;
 }
 
-/* line 316, ../sass/_content.scss */
+/* line 327, ../sass/_content.scss */
 .section-b:before {
   content: '';
   display: block;
@@ -464,24 +474,24 @@ h2 {
   margin: 0 auto 10%;
 }
 
-/* line 334, ../sass/_content.scss */
+/* line 345, ../sass/_content.scss */
 .stats-section {
   position: relative;
 }
 
-/* line 339, ../sass/_content.scss */
+/* line 350, ../sass/_content.scss */
 .stats {
   position: relative;
   height: 100px;
 }
-/* line 342, ../sass/_content.scss */
+/* line 353, ../sass/_content.scss */
 .stats h2 {
   width: 75%;
   right: -15px;
   position: absolute;
 }
 
-/* line 360, ../sass/_content.scss */
+/* line 371, ../sass/_content.scss */
 .img-stats {
   content: '';
   width: 64px;
@@ -492,22 +502,131 @@ h2 {
   top: 12px;
 }
 
-/* line 370, ../sass/_content.scss */
+/* line 381, ../sass/_content.scss */
 #stats-satisfaction-img {
   background: url("/images/smile.png") 50% 50% no-repeat;
 }
 
-/* line 374, ../sass/_content.scss */
+/* line 385, ../sass/_content.scss */
 #stats-typical-time-img {
   background: url("/images/clock.png") 50% 50% no-repeat;
 }
 
-/* line 378, ../sass/_content.scss */
+/* line 389, ../sass/_content.scss */
 #stats-average-duration-img {
   background: url("/images/hourglass.png") 50% 50% no-repeat;
 }
 
-/* line 390, ../sass/_content.scss */
+/* line 401, ../sass/_content.scss */
 .stats-3 {
   margin-bottom: 10%;
+}
+
+/*
+ * Copyright (c) 2012 Ben Olson (https://github.com/bseth99/jquery-ui-extensions)
+ *
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ *
+ */
+/* line 27, ../sass/_slider.scss */
+.ui-slider-wrapper {
+  position: relative;
+}
+
+/* line 28, ../sass/_slider.scss */
+.ui-slider-wrapper .ui-slider-horizontal {
+  width: 100%;
+}
+
+/* line 30, ../sass/_slider.scss */
+.ui-slider-labels {
+  position: absolute;
+  border: 1px solid transparent;
+}
+
+/* line 31, ../sass/_slider.scss */
+.ui-slider-label-ticks {
+  border: 1px solid transparent;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* line 32, ../sass/_slider.scss */
+.ui-slider-label-ticks span {
+  font-size: 0.9em;
+  min-width: 1.2em;
+}
+
+/* line 34, ../sass/_slider.scss */
+.ui-slider-wrapper.horizontal {
+  height: 4.5em;
+}
+
+/* line 35, ../sass/_slider.scss */
+.horizontal .ui-slider-labels {
+  left: 0;
+  right: 0;
+  top: 0.7em;
+}
+
+/* line 36, ../sass/_slider.scss */
+.horizontal .ui-slider-label-ticks {
+  width: 1.2em;
+  height: .8em;
+  text-align: center;
+  border-left: 1px solid #999;
+}
+
+/* line 37, ../sass/_slider.scss */
+.horizontal .ui-slider-label-ticks span {
+  position: relative;
+  display: inline-block;
+  margin-left: -1.2em;
+  top: .8em;
+}
+
+/* line 39, ../sass/_slider.scss */
+.ui-slider-wrapper.vertical {
+  width: 4.5em;
+}
+
+/* line 40, ../sass/_slider.scss */
+.vertical .ui-slider-labels {
+  top: 1px;
+  bottom: 0;
+  left: 0.7em;
+}
+
+/* line 41, ../sass/_slider.scss */
+.vertical .ui-slider-label-ticks {
+  height: 1.2em;
+  width: 0.8em;
+  border-bottom: 1px solid #999;
+}
+
+/* line 42, ../sass/_slider.scss */
+.vertical .ui-slider-label-ticks span {
+  position: relative;
+  display: inline-block;
+  margin-left: 1em;
+  top: .6em;
 }

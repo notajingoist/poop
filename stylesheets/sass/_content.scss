@@ -19,28 +19,33 @@
 	}
 }
 
-.yellow {
+.ui-slider-label-ticks > span {
+	font-family: "Chewy";
+	color: #fff;
+}
+
+#yellow {
 	background-color: #f9d70d;
 }
-.olive {
+#olive {
 	background-color:#627530;
 }
-.taupe {
+#taupe {
 	background-color:#b6b0ad;
 }
-.chocolate {
+#chocolate {
 	background-color:#b64926;
 }
-.darkChocolate {
+#darkChocolate {
 	background-color:#4f2502;
 }
-.black {
+#black {
 	background-color:#3d3d3d;
 }
-.burgundy {
+#burgundy {
 	background-color:#a12727;
 }
-.beige {
+#beige {
 	background-color:#b68c7c;
 }
 
@@ -148,10 +153,15 @@
 .img-circle {
 	width: 230px;
 	height: 230px;
-	margin: 0 auto;
+	margin: 15% auto;
 	
 	border-radius: 100%;
 	border: 8px solid #fff;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.5;
+	}
 }
 
 .satisfaction-img {
@@ -184,14 +194,15 @@
 
 .congrats-img {
 	background:
-		url('http://willvideoforfood.com/wp-content/uploads/2012/12/poop.png')
-		50% 50% no-repeat;
-	background-size: 130px 130px;
+		url('/images/effort-5.png'),
+		url('/images/satisfaction-5.png'),
+		url('/images/consistency/swirl-02.png')
+		40% 20% no-repeat;
+	background-size: 200px auto;
 	background-color: #fff;
 }
 
 .odor-dropdown {
-	padding: 20px;
 	border: none;
 	border-radius: 4px;
 	width: 100%;
@@ -200,7 +211,7 @@
 	//display: inline-block;
 	//left: 0;
 	//margin-right: 2.5%;
-	margin: 10% auto;
+	//margin: 0 auto;
 	height: 65px;
 	font-size: 28px;
 	padding: 15px;
@@ -210,7 +221,7 @@
 
 .odor-input {
 	position: relative;
-	margin: 0 auto;
+	margin: 5% auto;
 
 	
 	// .arrow-down {

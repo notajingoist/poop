@@ -22,9 +22,15 @@ var POOPSCOOP = {
 
 
 		$('.slider').slider();
-		//$('#main').fadeIn();		//console.log($('#slider').slider());
+		$('#main').fadeIn();		//console.log($('#slider').slider());
 		this.loadPhotos();
 
+
+		$('.slider').labeledslider({ min: 0, max: 4, tickInterval: 1});
+
+		this.consistencyLabels = ['liquid', 'smooth', 'fluffy', 'firm', 'solid'];
+		
+		$('#consistency-slider').labeledslider('option', 'tickLabels', this.consistencyLabels);
 
 		// $('.minicolors').minicolors({
 		// 	show: function() {
@@ -52,7 +58,7 @@ var POOPSCOOP = {
 		        return (image.tags.indexOf('food') >= 0);
 		    },
 		    accessToken: '1388629745.467ede5.b060b8511f114e89b49f07397a9e72eb',
-		    template: '<div class="hide"><img class="food-img" src="{{image}}"><div class="food-input"><input type="text" class="food-field" id="{{id}}"><div class="button button-next" data-food-id="{{id}}" data-food-url="{{image}}">Next</div></div></div>',
+		    template: '<div class="hide"><img class="food-img" src="{{image}}"><div class="food-input"><input type="text" class="food-field" id="{{id}}"><div class="button button-next" data-food-id="{{id}}" data-screen="#colors" data-food-url="{{image}}">Next</div></div></div>',
 		    after: function() {
 		    	
 
@@ -64,7 +70,7 @@ var POOPSCOOP = {
 
 		    	context.numFood = context.$foodImages.length;
 
-		    	$('.button-next').on('click', context.advanceImage.bind(context));
+		    	$('.button-next').on('click', context.advancePageFromButton.bind(context));//context.advanceImage.bind(context));
 
 		    	// for (var i = 0; i < context.$foodImages.length; i++) {
 		    	// 	context.userData.food[context.$foodImages[i].attr('src')] = 
@@ -80,6 +86,9 @@ var POOPSCOOP = {
 	},
 
 	setVars: function() {
+		this.$odorDropdown = $('.odor-dropdown');
+		this.$imgCircles = $('.img-circle');
+		this.$colors = $('.color');
 		this.$imPooping = $('#im-pooping');
 		this.$signInInstagram = $('#sign-in-instagram');
 		this.$panelScreens = $('.panel-screen');
@@ -95,17 +104,59 @@ var POOPSCOOP = {
 			black: '#3d3d3d',
 			burgundy: '#a12727',
 			beige: '#b68c7c'
+		};
+
+		this.odors = {
+			rotten: '',
+			sulfurous: '',
+			musky: '',
+			grassy: '',
+			strangelyPleasing: '',
+			none: ''
+		};
+
+		this.satisfaction = {
+			dissatisfied: '/images/satisfaction-1.png',
+			somewhatDissatisfied: '/images/satisfaction-2.png',
+			indifferent: '/images/satisfaction-3.png',
+			somewhatSatisfied: '/images/satisfaction-4.png',
+			verySatisfied: '/images/satisfaction-5.png'
+		};
+
+		this.consistency = {
+			liquid: '',
+			smooth: '',
+			fluffy: '',
+			firm: '',
+			solid: ''
+		};
+
+		this.effort = {
+			impossible: '',
+			challenging: '',
+			average: '', 
+			easy: '',
+			effortless: ''
 		}
+
+
+
+
 	},
 
 
 
 	bindEvents: function() {
 		this.$test.on('click', this.doSomething.bind(this));
-		this.$document.on('click', this.advancePage.bind(this));
+		//this.$document.on('click', this.advancePage.bind(this));
 		this.$imPooping.on('click', this.advancePageFromButton.bind(this));
 		this.$signInInstagram.on('click', this.advancePageFromButton.bind(this));
-		
+		this.$colors.on('click', this.advancePageFromButton.bind(this));
+
+		this.$imgCircles.on('click', this.advancePageFromButton.bind(this));
+		this.$odorDropdown.change(function(e) {
+
+		});
 		//console.log(this.$nextBtns[0].);
 
 		
@@ -129,7 +180,7 @@ var POOPSCOOP = {
 			$('#'+foodId).parent().prev().fadeOut(); //image
 
 
-			console.log("LOOOKALSSKLJDKAS");
+			//console.log("LOOOKALSSKLJDKAS");
 			var context = this;
 			this.$panelScreens.hide();
 			var nextId = this.$currentPanel.data('screen');
@@ -139,7 +190,7 @@ var POOPSCOOP = {
 				//context.checkPanel();
 			});
 
-			alert('hey');
+			//alert('hey');
 
 			setTimeout(function() {
 
@@ -204,13 +255,57 @@ var POOPSCOOP = {
 			// }
 		}
 
+		else if (this.$currentPanel.attr('id') === 'colors') {
+			this.userData.color = $('e.currentTarget').attr('id');
+
+		}
+
+		else if (this.$currentPanel.attr('id') === 'name') {
+			var foodId = $(e.currentTarget).data('foodId');
+			var foodValue = $('#'+foodId).val();
+			var foodImageURL = $(e.currentTarget).data('foodUrl'); 
+			var context = this;
+			
+
+			this.userData.food[foodImageURL] = foodValue;
+			this.currentFoodNum++;
+
+			//console.log($('.instafeed').eq(this.currentFoodNum));
+
+			$('#'+foodId).parent().fadeOut(); //next btn
+			$('#'+foodId).parent().prev().fadeOut(); //image
+		}
+
+		else if (this.$currentPanel.attr('id') === 'odor') {
+			this.userData.odor = $('.odor-dropdown').val();
+			console.log(this.userData.odor);
+		}
+
+		else if (this.$currentPanel.attr('id') === 'consistency') {
+			//this.userData.consistency = $('#consistency-slider').slider('option', 'value');
+
+			this.userData.consistency = 'fluffy';// $('#consistency-slider').val();
+			console.log(this.userData.consistency);
+		}
+
+		else if (this.$currentPanel.attr('id') === 'satisfaction') {
+			this.userData.satisfaction = 'indifferent';//$('#satisfaction-slider').val();
+			console.log(this.userData.satisfaction);
+		}
+
+		else if (this.$currentPanel.attr('id') === 'effort') {
+			this.userData.effort = 'effortless';////$('#effort-slider').val();
+			console.log(this.userData.effort);
+		}
+
 		var context = this;
 		setTimeout(function() {
 			//console.log(nextId);
 			
 			context.$currentPanel = $(nextId);
 			context.$currentPanel.fadeIn();
-			context.checkPanel();
+			console.log(context.$currentPanel);
+			//context.checkPanel();
 		});
 
 

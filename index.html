@@ -29,7 +29,7 @@
 	
 	<!-- <div class="panel-screen" id="calculating"></div>
 	 -->
-	<div class="panel-screen" id="name" data-screen="#colors">
+	<div class="panel-screen" id="name">
 		<div id="instafeed"></div>
 
 
@@ -40,16 +40,16 @@
 		</div> -->
 	</div>
 
-	<div class="panel-screen show" id="colors" data-screen="#odor">
+	<div class="panel-screen" id="colors">
 		<h1>color</h1>
-		<span class="color yellow"></span>
-		<span class="color olive"></span>
-		<span class="color taupe"></span>
-		<span class="color chocolate"></span>
-		<span class="color darkChocolate"></span>
-		<span class="color black"></span>
-		<span class="color burgundy"></span>
-		<span class="color beige"></span>
+		<span class="color" id="yellow" data-screen="#odor"></span>
+		<span class="color" id="olive" data-screen="#odor"></span>
+		<span class="color" id="taupe" data-screen="#odor"></span>
+		<span class="color" id="chocolate" data-screen="#odor"></span>
+		<span class="color" id="darkChocolate" data-screen="#odor"></span>
+		<span class="color" id="black" data-screen="#odor"></span>
+		<span class="color" id="burgundy" data-screen="#odor"></span>
+		<span class="color" id="beige" data-screen="#odor"></span>
 
 		<!-- <div class="minicolors minicolors-theme-default minicolors-position-bottom minicolors-position-left"> -->
 			<!-- <input type="hidden" id="hidden-input" class="demo minicolors-input" value="#db913d" size="7">
@@ -68,43 +68,50 @@
 
 	
 	
-	<div class="panel-screen" id="odor" data-screen="#consistency">
+	<div class="panel-screen" id="odor">
 		<h1>odor</h1>
 		<!-- <div class="odor-input"> -->
-		<div class="gif odor-img"></div>
+		
 			<select class="odor-dropdown">
+				<option value="rotten">rotten</option>
+				<option value="sulfurous">sulfurous</option>
 				<option value="musky">musky</option>
-				<option value="floral">floral</option>
 			  	<option value="strangely pleasing">strangely pleasing</option>
-			  	<option value="concerning">concerning</option>
-			  	<option value="pungent">pungent</option>
+			  	<option value="none">none</option>
 			</select>
+			
+			<div class="img-circle odor-img" data-screen="#consistency"></div>
+
+			<!-- <div id="odor-button" data-screen="#name" class="button button-poop">
+			
+			</div> -->
 		<!-- 	<div class="arrow-down"></div>
 		</div> -->
 	</div>
 
-	<div class="panel-screen" id="consistency" data-screen="#satisfaction">
+	<div class="panel-screen" id="consistency">
 		<h1>consistency</h1>
-		<div class="img-circle consistency-img"></div>
-		<div class="slider"></div>
+		<div class="img-circle consistency-img" data-screen="#satisfaction"></div>
+		<div class="slider" id="consistency-slider"></div>
 	</div>
 	
-	<div class="panel-screen" id="satisfaction" data-screen="#effort">
+	<div class="panel-screen" id="satisfaction">
 		<h1>satisfaction</h1>
-		<div class="img-circle satisfaction-img"></div>
-		<div class="slider"></div>
+		<div class="img-circle satisfaction-img" data-screen="#effort"></div>
+		<div class="slider" id="satisfaction-slider"></div>
 	</div>
 	
-	<div class="panel-screen" id="effort" data-screen="#congrats">
+	<div class="panel-screen" id="effort">
 		<h1>effort</h1>
-		<div class="img-circle effort-img"></div>
-		<div class="slider"></div>
+		<div class="img-circle effort-img" data-screen="#congrats"></div>
+		<div class="slider" id="effort-slider"></div>
 	</div>
 
 	<div class="panel-screen panel-congrats" id="congrats">
 		<section class="section-a">
 			<h1>CONGRATS</h1>
 			<div class="img-circle congrats-img"></div>
+			<!-- <img src="/images/consistency/swirl-02.png"> -->
 			<h2>Meet Jenny</h2>
 			<div class="poop-blurb">Hi! I'm your sparkly evil piece of poop. I smell like beans and like to feed on butt flesh. Oh em gee I look so scary. Some more random stuff about me, etcetera. I'm swirly and squishy and magical.</div>
 
@@ -162,9 +169,7 @@
 <script src="js/vendor/util.js"></script>
 <script type="text/javascript" src="js/vendor/instafeed.min.js"></script>
 
-<script type="text/javascript">
-    
-</script>
+<script type="text/javascript" src="js/vendor/slider.js"></script>
 <!-- <script src="js/vendor/colorpicker.js"></script> -->
 
 <script src="js/src/scripts.js"></script>
