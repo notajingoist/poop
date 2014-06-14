@@ -1,9 +1,28 @@
-var SITE = {
+var POOPSCOOP = {
 	init: function() {
 		this.$document = $(window.document);
 		this.$body = $('body');
 		this.$test = $('.test');
 		this.bindEvents();
+
+
+		$('.slider').slider();
+		console.log($('#slider').slider());
+
+		// $('.minicolors').minicolors({
+		// 	show: function() {
+		// 		console.log('Shooow');
+		// 	}
+		// });
+		// 
+		// var $box = $('#box');
+	 //    var box  = $box.tinycolorpicker();
+
+	 //    $box.bind("change", function()
+	 //    {
+	 //        console.log("do something on every change of color");
+	 //    });
+
 	},
 
 	bindEvents: function() {
@@ -27,4 +46,4 @@ var SITE = {
 	}
 }
 
-SITE.init();
+POOPSCOOP.init();

@@ -2,18 +2,153 @@
 <html lang="en" class="no-js">
 <head>
 	<meta charset="utf-8">
-	<title>poop</title>
+	<title>poopscoop</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Sansita+One|Chewy' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css"> -->
 	<link rel="stylesheet" href="stylesheets/css/style.css">
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 	<script src="js/vendor/modernizr.js"></script>
+	
 </head>
 <body>
 	
-	Hello
+	<div class="panel-screen" id="main">
+		<h1>poopscoop</h1>
+		<img class="test-img" src="http://placehold.it/250x150">
+		<div class="button button-poop">I'm pooping</div>
+	</div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<div class="panel-screen" id="account">
+		<div class="button button-poop">Sign in with Instagram</div>
+	</div>
+	
+	<div class="panel-screen" id="calculating"></div>
+	
+	<div class="panel-screen" id="name">
+		<img id="food-1" class="food-img" src="http://distilleryimage6.ak.instagram.com/33ac14de14d511e29fe522000a1f97ce_7.jpg">	
+		<div class="food-input">
+			<input type="text" class="food-field" name="food-1">
+			<div class="button button-next">Next</div>
+		</div>
+	</div>
+
+	<div class="panel-screen" id="colors">
+		<!-- <div class="minicolors minicolors-theme-default minicolors-position-bottom minicolors-position-left"> -->
+			<!-- <input type="hidden" id="hidden-input" class="demo minicolors-input" value="#db913d" size="7">
+			<span class="minicolors-swatch">
+				<span class="minicolors-swatch-color" style="background-color: rgb(219, 145, 61);"></span>
+			</span> -->
+
+			<!-- <div id="colorPicker">
+				<a class="color"><div class="colorInner"></div></a>
+				<div class="track"></div>
+				<ul class="dropdown"><li></li></ul>
+				<input type="hidden" class="colorInput"/>
+			</div> -->
+		<!-- </div> -->
+	</div>
+
+	
+	
+	<div class="panel-screen" id="odor">
+		<h1>odor</h1>
+		<!-- <div class="odor-input"> -->
+		<div class="gif odor-img"></div>
+			<select class="odor-dropdown">
+				<option value="musky">musky</option>
+				<option value="floral">floral</option>
+			  	<option value="strangely pleasing">strangely pleasing</option>
+			  	<option value="concerning">concerning</option>
+			  	<option value="pungent">pungent</option>
+			</select>
+		<!-- 	<div class="arrow-down"></div>
+		</div> -->
+	</div>
+
+	<div class="panel-screen" id="consistency">
+		<h1>consistency</h1>
+		<div class="img-circle consistency-img"></div>
+		<div class="slider"></div>
+	</div>
+	
+	<div class="panel-screen" id="satisfaction">
+		<h1>satisfaction</h1>
+		<div class="img-circle satisfaction-img"></div>
+		<div class="slider"></div>
+	</div>
+	
+	<div class="panel-screen" id="effort">
+		<h1>effort</h1>
+		<div class="img-circle effort-img"></div>
+		<div class="slider"></div>
+	</div>
+
+	<div class="panel-screen panel-congrats show" id="congrats">
+		<section class="section-a">
+			<h1>CONGRATS</h1>
+			<div class="img-circle congrats-img"></div>
+			<h2>Meet Jenny</h2>
+			<div class="poop-blurb">Hi! I'm your sparkly evil piece of poop. I smell like beans and like to feed on butt flesh. Oh em gee I look so scary. Some more random stuff about me, etcetera. I'm swirly and squishy and magical.</div>
+
+			<h2>Foods</h2>
+			<div class="slideshow">
+				<span class="arrow left-arrow"></span>
+				<span class="arrow right-arrow"></span>
+				<img class="test-img" src="http://placehold.it/100x100">
+				<img class="test-img" src="http://placehold.it/100x100">
+			</div>
+		</section>
+		<section class="section-b stats-section">
+			<h1>AVG STATS</h1>
+			<div class="stats stats-1" id="stats-satisfaction">
+				<span class="img-stats" id="stats-satisfaction-img"></span>
+				<h2>Satisfaction Levels</h2>
+			</div>
+			<div class="stats stats-2" id="stats-typical-time">
+				<span class="img-stats" id="stats-typical-time-img"></span>
+				<h2>Typical Time</h2>
+			</div>
+			<div class="stats stats-3" id="stats-average-duration">
+				<span class="img-stats" id="stats-average-duration-img"></span>
+				<h2>Average Duration</h2>
+			</div>
+			<!-- <div class="stats stats-4" id="stats-nutritional-facts">
+				<span class="img-stats" id="stats-nutritional-facts-img"></span>
+				<h2>Nutritional Facts</h2>
+			</div> -->
+		</section>
+		<section class="section-b">
+			<h1>NUTRITIONAL FACTS</h1>
+
+		</section>
+		<section class="section-b">
+			<h1>POOPS COLLECTED</h1>
+		</section>
+		<section class="section-b">
+			<h2>SHARE</h2>
+		</section>
+
+	</div>
+
+	<div class="panel-screen" id="poopfile"></div>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script>window.jQueryUI || document.write('<script src="js/vendor/jqueryui.js"><\/script>')</script>
+
 <script src="js/vendor/util.js"></script>
+<script src="js/vendor/colorpicker.js"></script>
+<script type="text/javascript">
+		$(document).ready(function()
+        {
+			$('#colorPicker').tinycolorpicker();
+		});
+</script>
 <script src="js/src/scripts.js"></script>
 </body>
 </html>

@@ -1,1 +1,308 @@
+.food-img {
+	//@extend %width-range;
+	width: 100%;
+	border-radius: 4px;
+	border: 8px solid #fff;
+}
+
+.food-input {
+	//@extend %width-range;
+	position: relative;
+	margin: 0 auto;
+	//margin-bottom: 120px;
+
+	.food-field {
+		padding: 20px;
+		border: none;
+		border-radius: 4px;
+		width: 57.5%;
+		position: absolute;
+		display: inline-block;
+		left: 0;
+		margin-right: 2.5%;
+		margin: 10% auto;
+		height: 65px;
+		font-size: 28px;
+		padding: 15px;
+		font-family: "PT Sans", sans-serif;
+	}
+
+	.button-next {
+		margin-left: 2.5%;
+		display: inline-block;
+		width: 37.5%;
+		position: absolute;
+		right: 0;
+		border-radius: 4px;
+		height: 65px;
+		line-height: 0.7;
+		//margin: 10% auto;
+	}
+}
+
+.button-poop {
+	//@extend %width-range;
+	border-radius: 35%;
+	line-height: 1.3;
+	margin: 35px auto;
+}
+
+.img-circle {
+	width: 230px;
+	height: 230px;
+	margin: 0 auto;
+	
+	border-radius: 100%;
+	border: 8px solid #fff;
+}
+
+.satisfaction-img {
+	background: 
+		url('http://cdn.sheknows.com/articles/2014/02/cat_GIFs/cat-smile-purr.gif') 
+		50% 50% no-repeat;
+	background-size: cover;
+}
+
+.odor-img {
+	background: 
+		url('http://i.imgur.com/os2lHro.gif') 
+		50% 50% no-repeat;
+	background-size: cover;
+}
+
+.consistency-img {
+	background: 
+		url('http://i.huffpost.com/gadgets/slideshows/339559/slide_339559_3479854_free.gif') 
+		50% 50% no-repeat;
+	background-size: cover;
+}
+
+.effort-img {
+	background: 
+		url('http://i.imgur.com/KFR4tHs.gif') 
+		50% 50% no-repeat;
+	background-size: cover;
+}
+
+.congrats-img {
+	background:
+		url('http://willvideoforfood.com/wp-content/uploads/2012/12/poop.png')
+		50% 50% no-repeat;
+	background-size: 130px 130px;
+	background-color: #fff;
+}
+
+.odor-dropdown {
+	padding: 20px;
+	border: none;
+	border-radius: 4px;
+	width: 100%;
+	background: #fff;
+	//position: absolute;
+	//display: inline-block;
+	//left: 0;
+	//margin-right: 2.5%;
+	margin: 10% auto;
+	height: 65px;
+	font-size: 28px;
+	padding: 15px;
+	font-family: "PT Sans", sans-serif;	
+}
+
+
+.odor-input {
+	position: relative;
+	margin: 0 auto;
+
+	
+	// .arrow-down {
+	// 	width: 0;
+	// 	height: 0;
+	// 	border-left: 20px solid transparent;
+	// 	border-right: 20px solid transparent;
+	// 	border-top: 20px solid $poop-col;
+	// 	position: absolute;
+	// 	top: 20px;
+	// 	right: 10px;
+	// 	margin: 10% auto;
+	// }
+}
+
+.slider {
+	margin: 20% auto;
+	width: 80%;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background: $poop-col !important;
+	border: none !important;
+	width: 25% !important;
+	border-radius: 35% !important;
+	height: 30px !important;
+	//line-height: 2 !important;
+
+	// background: #ff0000 
+	// 	url('http://greensportsalliance.org/images/lightGreenSquare.gif') 
+	// 	50% 50% repeat-x !important;
+}
+
+.ui-slider-horizontal 
+.ui-slider-handle {
+	top: -.5em !important;
+
+	&:hover {
+		cursor: pointer;
+	}
+	//background: red !important;
+	//width: 100px !important;
+}
+
+
+.poop-blurb {
+	width: 100%;
+	text-align: left;
+	font-family: "PT Sans", sans-serif;
+	background-color: #fff;
+	padding: 20px;
+	line-height: 1.3;
+	border-radius: 4px;
+	font-size: 18px;
+}
+
+.slideshow {
+	width: 100%;
+	margin-bottom: 10%;
+	position: relative;
+
+	img {
+		min-width: 50px;
+		min-height: 50px;
+		width: 35%;
+		height: 35%;
+		margin: 2.5%;
+		// &:first-child {
+		// 	margin-right: 5%;
+		// }
+	}
+}
+
+.arrow {
+	display: block;
+	width: 48px;
+	height: 48px;
+	position: absolute;
+	top: calc(50% - 24px);
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.left-arrow {
+	background: url('/images/left-arrow.png') 50% 50% no-repeat;
+	left: -24px;
+}
+
+.right-arrow {
+	background: url('/images/right-arrow.png') 50% 50% no-repeat;
+	right: -24px;
+}
+
+.section-a, 
+.section-b {
+	//@extend %width-range;
+	margin: 0 auto;
+}
+
+.section-b {
+	//background-color: #fff;
+	&:before {
+		content: '';
+		display: block;
+		//width: 80%;
+		width: 100%;
+		border-top: 30px solid $poop-col;
+		border-radius: 40%;
+		margin-bottom: 10%;
+		margin: 0 auto 10%;
+	}
+}
+
+
+.panel-congrats {
+	// width: 100% !important;
+	// background-color: red;
+}
+
+.stats-section {
+	//height: $stats-height * 6;
+	position: relative;
+}
+
+.stats {
+	position: relative;
+	height: $stats-height;
+	h2 {
+		width: 75%;
+		right: -15px;
+		position: absolute;
+	}
+	//background-color: red;
+	// &:before {
+	// 	content: '';
+	// 	width: 64px;
+	// 	height: 64px;
+	// 	background: url('/images/smiley.png');
+	// 	display: block;
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 0;
+	// }
+}
+
+.img-stats {
+	content: '';
+	width: 64px;
+	height: 64px;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 12px;	
+}
+
+#stats-satisfaction-img {
+	background: url('/images/smile.png') 50% 50% no-repeat;
+}
+
+#stats-typical-time-img {
+	background: url('/images/clock.png') 50% 50% no-repeat;
+}
+
+#stats-average-duration-img {
+	background: url('/images/hourglass.png') 50% 50% no-repeat;
+}
+
+.stats-1 {
+	
+}
+
+.stats-2 {
+	//margin-top: $stats-height;
+}
+
+.stats-3 {
+	//margin-top: $stats-height * 2;
+	margin-bottom: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
