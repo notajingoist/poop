@@ -3,7 +3,45 @@
 	width: 100%;
 	border-radius: 4px;
 	border: 8px solid #fff;
-	display: none;
+	//display: none;
+}
+
+.color {
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	//background-color: red;
+	border-radius: 100%;
+	margin: 5px;
+	&:hover {
+		opacity: 0.5;
+		cursor: pointer;
+	}
+}
+
+.yellow {
+	background-color: #f9d70d;
+}
+.olive {
+	background-color:#627530;
+}
+.taupe {
+	background-color:#b6b0ad;
+}
+.chocolate {
+	background-color:#b64926;
+}
+.darkChocolate {
+	background-color:#4f2502;
+}
+.black {
+	background-color:#3d3d3d;
+}
+.burgundy {
+	background-color:#a12727;
+}
+.beige {
+	background-color:#b68c7c;
 }
 
 .food-input {
@@ -41,6 +79,22 @@
 	}
 }
 
+.name-field {
+	padding: 20px;
+	border: none;
+	border-radius: 4px;
+	width: 100%;
+	display: block;
+	
+	margin: 80% auto;
+	height: 65px;
+	font-size: 28px;
+	padding: 15px;
+	font-family: "PT Sans", sans-serif;
+
+
+}
+
 .button {
 	border: none;
 	font-family: "bebas_neueregular", "PT Sans", "Chewy", "PT Sans", sans-serif;
@@ -58,6 +112,7 @@
 
 	&:hover {
 		cursor: pointer;
+		//box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
 		opacity: 0.7;
 		//background-color: #eee;
 	}
@@ -336,13 +391,6 @@
 	//margin-top: $stats-height * 2;
 	margin-bottom: 10%;
 }
-
-
-
-
-
-
-
 
 
 
