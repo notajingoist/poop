@@ -1,0 +1,27 @@
+{
+  "name": "poop",
+  "version": "0.0.0",
+  "description": "pooooop comedy hack day 2014",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notajingoist/poop.git"
+  },
+  "keywords": [
+    "poop",
+    "chd4"
+  ],
+  "author": "jing-tin-alec-amitav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/notajingoist/poop/issues"
+  },
+  "homepage": "https://github.com/notajingoist/poop",
+  "dependencies": {
+    "express": "^4.4.3",
+    "logfmt": "^1.1.2"
+  }
+}
